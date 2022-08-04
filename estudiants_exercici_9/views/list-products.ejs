@@ -16,26 +16,17 @@
             <th>Product Name</th>
             <th>List Price</th>
             <th>Category</th>
-
         </tr>
 
+        <% products.forEach(function(product) { %>
+            <tr class="w3-hover-blue">
+                <td><%= product.product_name %></td>
+                <td><%= product.list_price %></td>
+                <td><%= product.category %></td>
+            </tr>
+        <% }); %>
 
-        <tr class="w3-hover-blue">
-            <td> Potatoes
-            </td>
-            <td> 40.00
-            </td>
-            <td>Dried Fruit & Nuts
-            </td>
-        </tr>
-        <tr class="w3-hover-blue">
-            <td> Tomatoes
-            </td>
-            <td> 20.00
-            </td>
-            <td>Dried Fruit & Nuts
-            </td>
-        </tr>
+
 
     </table>
 

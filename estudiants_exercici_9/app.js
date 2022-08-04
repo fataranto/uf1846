@@ -29,14 +29,19 @@ connection.query(query1, function(error, results) {
         console.log("Error1!: ", error);
         return;
     }
-    console.log('The solution for Query1 is: ', results);
+    //console.log('The solution for Query1 is: ', results);
     resultsQuery = results;
 });
 
 /**
  * APARTAT 2 - Implementa aquí l'endpoint
  */
+app.get('/', function(req, res) {
+    res.render('list-products.ejs', {
+        products: resultsQuery
+    });
 
-/**
- * app.listen(3000);
- */
+});
+
+ app.listen(3000);
+ 
